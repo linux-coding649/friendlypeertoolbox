@@ -3,6 +3,16 @@ h1 {
   font-size: 3vw;
 }
 
+h2 {
+  font-family: "Poppins", sans-serif, monospace;
+  font-size: 2.5vw;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif, monospace;
+  font-size: 2vw;
+}
+
 p {
   font-family: "Poppins", sans-serif, monospace;
   font-size: 1vw;
