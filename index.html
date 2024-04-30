@@ -11,5 +11,12 @@
 </head>
 <body>
   <h1 class="c">Friendly Peer Toolbox</h1>
-  <p>Under Development</p>
+  <div name="taskgen" id="taskgen">
+  <h3>Peer Task Generator!</h3>
+  <p>Press the button to generate a task to do for the generated person.</p>
+  <button onclick=generate_task()>Generate A Task</button>
+  <div name="task_result" id="task_result" style="display:none">
+  <p><span class="b u">Your Task:</span><span name="task" id="task"></span></p>
+  </div>
+  </div>
 </body>
