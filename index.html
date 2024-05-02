@@ -10,6 +10,13 @@
 </head>
 <body>
 <script>
+
+function delay(milliseconds){
+    return new Promise(resolve => {
+        setTimeout(resolve, milliseconds);
+    });
+}
+
 function generate_task() {
 	console.log("task_gen");
 	for (let i = 0; i < 11, i++) {
@@ -19,7 +26,7 @@ function generate_task() {
 	var randomtask = tasks[Math.floor(Math.random() * tasks.length)];
 	document.getElementById("task_result").style = "display: block";
         document.getElementById("task").textContent = randomtask.concat(" ", randomppl);
-	setTimeout(function(){console.log("looping")}, 1000);
+	delay(1000)
 };
 	
 	
