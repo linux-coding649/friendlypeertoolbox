@@ -10,6 +10,11 @@
 </head>
 <body>
 <script>
+function wait(seconds) {
+   return new Promise(resolve => {
+      setTimeout(resolve, seconds * 1000);
+   });
+};
 function gts_proc() {
 	var ppl = ["Alex","Zunairah","Celeste","Sofia","Charlotte","Ethan Lister","Ethan Su","Livia","Chloe","Nathan","Evelyn","Anyane","Kevin","Jamie","Simon","Taj","Harvey","JP","Noah","Anna","Melody"];
 	var tasks = ["Say hello to","Start a conversation with", "Give a compliment to"];
@@ -22,7 +27,8 @@ function gts_proc() {
 function generate_task() {
 	console.log("task_gen");
 	for (let i = 0; i < 11; i++) {
-	setTimeout(gts_proc, 1500);
+	gts_proc();
+	await wait(0.5);
 };
 	
 	
