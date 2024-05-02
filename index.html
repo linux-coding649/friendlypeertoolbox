@@ -10,23 +10,19 @@
 </head>
 <body>
 <script>
-
-function delay(milliseconds){
-    return new Promise(resolve => {
-        setTimeout(resolve, milliseconds);
-    });
-}
-
-function generate_task() {
-	console.log("task_gen");
-	for (let i = 0; i < 11, i++) {
+function gts_proc() {
 	var ppl = ["Alex","Zunairah","Celeste","Sofia","Charlotte","Ethan Lister","Ethan Su","Livia","Chloe","Nathan","Evelyn","Anyane","Kevin","Jamie","Simon","Taj","Harvey","JP","Noah","Anna","Melody"];
 	var tasks = ["Say hello to","Start a conversation with", "Give a compliment to"];
 	var randomppl = ppl[Math.floor(Math.random() * ppl.length)];
 	var randomtask = tasks[Math.floor(Math.random() * tasks.length)];
 	document.getElementById("task_result").style = "display: block";
         document.getElementById("task").textContent = randomtask.concat(" ", randomppl);
-	await delay(1000);
+};
+
+function generate_task() {
+	console.log("task_gen");
+	for (let i = 0; i < 11, i++) {
+	setTimeout(gts_proc, 1500)
 };
 	
 	
