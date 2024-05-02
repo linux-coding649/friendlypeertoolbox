@@ -17,7 +17,7 @@ function generate_task() {
 	var randomppl = ppl[Math.floor(Math.random() * ppl.length)];
 	var randomtask = tasks[Math.floor(Math.random() * tasks.length)];
 	document.getElementById("task_result").style = "display: block";
-        document.getElementById("task").textContent = tasks + ppl;
+        document.getElementById("task").textContent = randomtasks + randomppl;
 	
 	
 }
@@ -28,7 +28,7 @@ function generate_task() {
   <p>Press the button to generate a task to do for the generated person.</p>
   <button onclick="generate_task()">Generate A Task</button>
   <div name="task_result" id="task_result" style="display:none">
-  <p><span class="b u">Your New Task:</span><span name="task" id="task"></span></p>
+  <p><span class="b u">Your New Task: </span><span name="task" id="task"></span></p>
   </div>
   </div>
 </body>
