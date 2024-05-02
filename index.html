@@ -12,18 +12,21 @@
 <script>
 function generate_task() {
 	console.log("task_gen");
+	for (let i = 0; i < 11, i++) {
 	var ppl = ["Alex","Zunairah","Celeste","Sofia","Charlotte","Ethan Lister","Ethan Su","Livia","Chloe","Nathan","Evelyn","Anyane","Kevin","Jamie","Simon","Taj","Harvey","JP","Noah","Anna","Melody"];
 	var tasks = ["Say hello to","Start a conversation with", "Give a compliment to"];
 	var randomppl = ppl[Math.floor(Math.random() * ppl.length)];
 	var randomtask = tasks[Math.floor(Math.random() * tasks.length)];
 	document.getElementById("task_result").style = "display: block";
         document.getElementById("task").textContent = randomtask.concat(" ", randomppl);
+	setTimeout(function(){console.log("looping")}, 1000);
+};
 	
 	
 }
 </script>
   <h1 class="c">Friendly Peer Toolbox</h1>
-  <div name="taskgen" id="taskgen">
+  <div class="c" name="taskgen" id="taskgen">
   <h3>Peer Task Generator!</h3>
   <p>Press the button to generate a task to do for the generated person.</p>
   <button onclick="generate_task()">Generate A Task</button>
