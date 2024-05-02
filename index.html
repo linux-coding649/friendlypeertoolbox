@@ -30,9 +30,7 @@ function gts_proc() {
 function generate_task() {
 	console.log("task_gen");
 	var siv = setInterval(gts_proc, 250);
-	for (let i = 0; i < 11; i++) {
-		await wait(5);
-};
+	await wait(5);
 	clearInterval(siv);
 	
 	
