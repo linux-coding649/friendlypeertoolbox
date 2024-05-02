@@ -26,8 +26,7 @@ function gts_proc() {
 function generate_task() {
 	console.log("task_gen");
 	for (let i = 0; i < 11; i++) {
-		gts_proc();
-		setTimeout(nothing(), 500);
+		setInterval(gts_proc, 500);
 };
 	
 	
