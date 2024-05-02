@@ -13,11 +13,11 @@
 function generate_task() {
 	alert("Hello");
 	var ppl = ["Alex","Zunairah","Celeste","Sofia","Charlotte","Ethan Lister","Ethan Su","Livia","Chloe","Nathan","Evelyn","Anyane","Kevin","Jamie","Simon","Taj","Harvey","JP","Noah","Anna","Melody"];
-	var tasks = ["Say hello to ","Start a conversation with ", "Give a compliment to "];
+	var tasks = ["Say hello to","Start a conversation with", "Give a compliment to"];
 	var randomppl = ppl[Math.floor(Math.random() * ppl.length)];
 	var randomtask = tasks[Math.floor(Math.random() * tasks.length)];
 	document.getElementById("task_result").style = "display: block";
-        document.getElementById("task").textContent = randomtasks + randomppl;
+        document.getElementById("task").textContent = concat(randomtasks, randomppl);
 	
 	
 }
