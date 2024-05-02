@@ -27,7 +27,7 @@ function generate_task() {
 	console.log("task_gen");
 	var siv = setInterval(gts_proc, 250);
 	for (let i = 0; i < 11; i++) {
-		setTimeout(nothing, 5000);
+		await new Promise(r => setTimeout(r, 5000));
 };
 	clearInterval(siv);
 	
