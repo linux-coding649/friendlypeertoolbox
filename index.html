@@ -10,7 +10,11 @@
 </head>
 <body>
 <script>
-
+function wait(seconds) {
+   return new Promise(resolve => {
+      setTimeout(resolve, seconds * 1000);
+   });
+} 
 function nothing() {
 	console.log(" ");
 };
@@ -27,7 +31,7 @@ function generate_task() {
 	console.log("task_gen");
 	var siv = setInterval(gts_proc, 250);
 	for (let i = 0; i < 11; i++) {
-		await new Promise(r => setTimeout(r, 5000));
+		await wait(5);
 };
 	clearInterval(siv);
 	
