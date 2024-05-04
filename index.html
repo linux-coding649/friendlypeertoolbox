@@ -34,13 +34,13 @@ function gtsr_proc() {
 	var tasks = ["Say hello to","Start a conversation with", "Give a compliment to","For the next avaliable group task, work with", "Do homework with"];
 	var randomppl = ppl[Math.floor(Math.random() * ppl.length)];
 	var randomtask = tasks[Math.floor(Math.random() * tasks.length)];
-	document.getElementById("task_result").style = "display: none";
-	document.getElementById("task_roller").style = "display: block";
         document.getElementById("taskr").textContent = randomtask.concat(" ", randomppl);
 };
 
 function generate_task() {
 	console.log("task_gen");
+	document.getElementById("task_result").style = "display: none";
+	document.getElementById("task_roller").style = "display: block";
 	setInterval(gtsr_proc, 250);
 	setTimeout(gts_proc, 5000);
 	
