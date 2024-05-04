@@ -26,6 +26,7 @@ function gts_proc() {
 	var randomppl = ppl[Math.floor(Math.random() * ppl.length)];
 	var randomtask = tasks[Math.floor(Math.random() * tasks.length)];
 	document.getElementById("task_roller").style = "display: none";
+	document.getElementById("buttonl").disabled = false;
 	document.getElementById("task_result").style = "display: block";
         document.getElementById("task").textContent = randomtask.concat(" ", randomppl);
 };
@@ -41,6 +42,7 @@ function generate_task() {
 	console.log("task_gen");
 	document.getElementById("task_result").style = "display: none";
 	document.getElementById("task_roller").style = "display: block";
+	document.getElementById("buttonl").disabled = true;
 	setInterval(gtsr_proc, 250);
 	setTimeout(gts_proc, 5000);
 	
@@ -51,7 +53,7 @@ function generate_task() {
   <div class="c" name="taskgen" id="taskgen">
   <h3>Peer Task Generator!</h3>
   <p>Press the button to generate a task to do for the generated person.</p>
-  <button onclick="generate_task()">Generate A Task</button>
+  <button id="buttonl" onclick="generate_task()">Generate A Task</button>
   <div name="task_result" id="task_result" style="display:none">
   <p><span class="b u">Your New Task: </span><span name="task" id="task"></span></p>
 <p>Once you have finished your task, record it <a href="https://forms.gle/brViPj4RVNg7r8tR7" target="_blank" rel="noopener noreferrer">here</a>.</p>
