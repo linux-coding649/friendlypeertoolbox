@@ -22,18 +22,27 @@ function nothing() {
 };
 function gts_proc() {
 	var ppl = ["Alex","Zunairah","Celeste","Sofia","Charlotte","Ethan Lister","Ethan Su","Livia","Chloe","Nathan","Evelyn","Anyane","Kevin","Jamie","Simon","Taj","Harvey","JP","Noah","Anna","Melody"];
-	var tasks = ["Say hello to","Start a conversation with", "Give a compliment to"];
+	var tasks = ["Say hello to","Start a conversation with", "Give a compliment to", "For the next avaliable group task, work with", "Do homework with"];
 	var randomppl = ppl[Math.floor(Math.random() * ppl.length)];
 	var randomtask = tasks[Math.floor(Math.random() * tasks.length)];
+	document.getElementById("task_roller").style = "display: none";
 	document.getElementById("task_result").style = "display: block";
         document.getElementById("task").textContent = randomtask.concat(" ", randomppl);
+};
+function gtsr_proc() {
+	var ppl = ["Alex","Zunairah","Celeste","Sofia","Charlotte","Ethan Lister","Ethan Su","Livia","Chloe","Nathan","Evelyn","Anyane","Kevin","Jamie","Simon","Taj","Harvey","JP","Noah","Anna","Melody"];
+	var tasks = ["Say hello to","Start a conversation with", "Give a compliment to","For the next avaliable group task, work with", "Do homework with"];
+	var randomppl = ppl[Math.floor(Math.random() * ppl.length)];
+	var randomtask = tasks[Math.floor(Math.random() * tasks.length)];
+	document.getElementById("task_result").style = "display: none";
+	document.getElementById("task_roller").style = "display: block";
+        document.getElementById("taskr").textContent = randomtask.concat(" ", randomppl);
 };
 
 function generate_task() {
 	console.log("task_gen");
-	var siv = setInterval(gts_proc, 250);
-	wait(5000);
-	clearInterval(siv);
+	setInterval(gtsr_proc, 250);
+	setTimeout(gts_proc, 5000);
 	
 	
 };
@@ -45,6 +54,9 @@ function generate_task() {
   <button onclick="generate_task()">Generate A Task</button>
   <div name="task_result" id="task_result" style="display:none">
   <p><span class="b u">Your New Task: </span><span name="task" id="task"></span></p>
+  </div>
+<div name="task_roller" id="task_roller" style="display:none">
+  <p><span class="b u">Your New Task: </span><span name="taskr" id="taskr"></span></p>
   </div>
   </div>
 </body>
